@@ -6,6 +6,120 @@ body {
   font-size: 16px;
   font-weight: 300; }
 
+
+
+  .glitch {
+    font-size: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    padding-bottom: 40px;
+    top: 50%;
+    left: 420px;
+    width: 100%;
+    padding-top: 60px;
+    -webkit-transform: translate(-40%, -40%);
+            transform: translate(-40%, -40%);
+    margin: 0;
+    color: rgb(15, 153, 61);
+    letter-spacing: 5px;
+  }
+  .glitch:before, .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+  
+    opacity: .8;
+  }
+  .glitch:after {
+    color: #f0f;
+    z-index: -2;
+  }
+  .glitch:before {
+    color: #0ff;
+    z-index: -1;
+  }
+  .glitch:hover:before {
+    -webkit-animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+  }
+  .glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .glitch {
+      font-size: 3em;
+    }
+  }
+  @-webkit-keyframes glitch {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+              transform: translate(-5px, 5px);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+              transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+              transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+              transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  @keyframes glitch {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-5px, 5px);
+              transform: translate(-5px, 5px);
+    }
+    40% {
+      -webkit-transform: translate(-5px, -5px);
+              transform: translate(-5px, -5px);
+    }
+    60% {
+      -webkit-transform: translate(5px, 5px);
+              transform: translate(5px, 5px);
+    }
+    80% {
+      -webkit-transform: translate(5px, -5px);
+              transform: translate(5px, -5px);
+    }
+    to {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  
+  
+  
+
+
+
+
+
 .p1-gradient-bg, .thumb .overlay-bg {
   background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
