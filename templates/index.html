@@ -16,6 +16,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+<!-- Include a polyfill for ES6 Promises (optional) for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+
+<link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
 
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
@@ -525,7 +535,16 @@
 							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
 						</div>
 					</form>
-					<div>{{ result }}</div>
+					<script>
+
+						function test()
+						{
+							Swal.fire('Thanks For Contacting Us..')
+							window.scrollTo(0,document.body.scrollHeight);
+						
+						}
+						{{ code }}
+					</script>
 				</div>
 				<div class="col-md-5 pl-md-5">
 					<h3 class="mb-5">My Contact Details</h3>

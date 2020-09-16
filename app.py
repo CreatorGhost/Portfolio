@@ -43,7 +43,7 @@ def form():
         msg=cleanMsg(data)
         password=os.environ.get('EMAIL_PASS')
         #mail('wantech010@gmail.com', password, msg)
-        return render_template("index.html",result='Message Sent Successfully ')
+        return render_template("index.html",code="test()")
     else:
         return f"Something Not Right "
     
