@@ -20,11 +20,6 @@ def mail(email, pssd, mssg):
 def home_page():
     return render_template("index.html")
 
-'''
-@app.route('/<string:page_name>')
-def page(page_name):
-    return render_template(page_name)
-'''
 
 def cleanMsg(data):
     name= data.get('name')
@@ -42,7 +37,7 @@ def form():
         data = request.form.to_dict()
         msg=cleanMsg(data)
         password=os.environ.get('EMAIL_PASS')
-        #mail('wantech010@gmail.com', password, msg)
+        mail('wantech010@gmail.com', password, msg)
         return render_template("index.html",code="test()")
     else:
         return f"Something Not Right "
